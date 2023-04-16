@@ -1,2 +1,3 @@
 # cheatsheets
-Cheatsheets for everything.
+
+Exercises and cheatsheets for everything.
