@@ -1,0 +1,749 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Console</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Roboto&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body class="cheatsheet">
+  <div>
+    <ul>
+      <li><a href="#1">grep</a></li>
+      <li><a href="#2">network</a></li>
+      <li><a href="#3">ffmpeg</a></li>
+      <li><a href="#4">gpg</a></li>
+      <li><a href="#5">openssl</a></li>
+      <li><a href="#6">caffe</a></li>
+      <li><a href="#7">users</a></li>
+      <li><a href="#8">file information</a></li>
+      <li><a href="#9">other</a></li>
+      <li><a href="#10">search</a></li>
+      <li><a href="#11">compress</a></li>
+      <li><a href="#12">nvidia</a></li>
+      <li><a href="#13">filesystem</a></li>
+      <li><a href="#14">ftp</a></li>
+      <li><a href="#15">ssh</a></li>
+      <li><a href="#16">h5</a></li>
+      <li><a href="#17">java</a></li>
+    </ul>
+  </div>
+  <div>
+    <h1 id="1">grep</h1>
+    <div class="shortcode">
+      <div>grep -r --include \\*.hpp --include \\*.cpp 'h2o_upgrade_to_websocket' <i style="color: #060;font-weight: normal;"># </i></div>
+      <div>make 2>&1 | grep ImageLoader <i style="color: #060;font-weight: normal;"># grep c++ compiler output</i></div> 
+      <div>gcc foo.c |& grep error <i style="color: #060;font-weight: normal;"># grep c++ compiler output</i></div> 
+      <div>grep --color 'data' fileName <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>sudo tcpdump -s 0 -v -n -l | egrep -i "POST /|GET /|Host:" <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>grep -o -i mauris example.txt | wc -l <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ldconfig -p | grep libopenblas <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>grep -o -i mauris example.txt | wc -l <i style="color: #060;font-weight: normal;"># </i></div> 
+      <!-- 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+      -->
+    </div>
+    <h1 id="2">network</h1>
+    <div class="shortcode">
+      <div>hostname -i -I <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>wget -c file <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>tcpdump <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>tcpdump -i eth0 dst 10.0.0.5 and port 53 <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>sudo tcpdump -xx -XX dst 92.53.96.101 and port 80 <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>sudo tcpdump -A -vvv dst 92.53.96.101 and port 80 <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>sudo tcpdump -s 0 -v -n -l | egrep -i "POST /|GET /|Host:" <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>dig domain <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>dig -x host <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>curl -d "name=Rafael%20Sagula&phone=3320780" http://localhost:9123/ind -v -w "\n" <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>curl -F "file=@settings.ini" http://localhost:9123/ind  -w "\n" <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>curl -F "pictures=@settings.ini,main.cpp" http://localhost:9123/ind  -w "\n" <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>curl --http2 http://localhost:9123/ind -v -w "\n" <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>curl -sH 'Accept-encoding: gzip' http://localhost:9123/ind -v -w "\n" <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>curl -T upload --limit-rate 5K -F "coolfiles=@14170867.png;type=image/png,settings.ini" http://localhost:9123/ind -v -w "\n" <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>curl --http2-prior-knowledge http://localhost:9123/ind -v -w "\n" <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>curl --compressed http://localhost:9123/ind -v -w "\n" <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>curl -F person=anonymous -F x=y http://localhost:8000 -v <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>echo "hi" | nc -4u -w1 localhost 8000 <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>nc -ul 8000 <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>nc -kdl localhost 8000 <i style="color: #060;font-weight: normal;"># wget http://localhost:8000</i></div> 
+      <div>wscat -c "wss://ws-feed.gdax.com" <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ifconfig -a <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>youtube-dl -F https://www.youtube.com/watch?v=LGhTi2FjvNA <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>traceroute <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>tracepath <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>youtube-dl -v -f 137 https://www.youtube.com/watch?v=Ske1_LuymRI <i style="color: #060;font-weight: normal;"># </i></div> 
+      <!-- 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+      -->
+    </div>
+    <h1 id="3">ffmpeg</h1>
+    <div class="shortcode">
+      <div>ffmpeg -y -c:a libfdk_aac -c:v libx264 -i in.mp4 -c:v libvpx-vp9 -c:a libvorbis out.webm <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffmpeg -ss &lt;start&gt; -i &lt;input&gt; -t &lt;duration&gt; -c copy &lt;output&gt; <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffmpeg -ss 00:01:50 -i &lt;input&gt; -t 10.5 -c copy &lt;output&gt; <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffmpeg -ss 2.5 -i &lt;input&gt; -to 10 -c copy &lt;output&gt; <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffmpeg -h encoder=libx264 <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffmpeg -i input.mp4 -c:v libvpx-vp9 -s 160x90 -b:v 250k -keyint_min 150 -g 150 -an -f webm -dash 1 output.webm <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffmpeg -i input.mp4 -c:a libvorbis -b:a 128k -vn -f webm -dash 1 output.webm <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffmpeg -i input -map 0:v -map 0:a -c copy -c:a aac output.mp4 <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffmpeg -i input -map 0 -map -0:s -c copy -c:a aac output.mp4 <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffmpeg -i "rtsp://ip/video.mp4" output.mp4 <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffmpeg -f rawvideo -pixel_format rgb24 -video_size 640x480 -i "tcp://127.0.0.1:2345" -codec:v libx264 -pix_fmt yuv420p Video.mp4 <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffmpeg -i input.webm -c:v rawvideo -pix_fmt yuv420p output.yuv <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffmpeg -y -i input.mp4 -ss 00:01:24 -t 00:00:02 output.mp4 <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffmpeg -i &lt;input&gt; -vf "scale=w=320:h=240" &lt;output&gt; <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffmpeg -i &lt;input&gt; -vf scale=w=-2:h=240 &lt;output&gt; <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffmpeg -i &lt;input&gt; -r 24 &lt;output&gt; <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffmpeg -i &lt;input&gt; -filter:v fps=24 &lt;output&gt;<i style="color: #060;font-weight: normal;"># accurate blending</i></div> 
+      <div>ffmpeg -i video.mp4 -vn -c:a copy audio.aac <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffmpeg -i audio.aac -i video.mp4 output.mp4 <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffmpeg -i &lt;input&gt; -c:v libx264 -crf 23 -c:a aac -b:a 128k output.mkv <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffmpeg -y -i &lt;input&gt; -c:v libx264 -b:v 8M -pass 1 -c:a aac -b:a 128k -f mp4 /dev/null <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffmpeg -i input.mp4 -i input.m4a -c copy -map 0:v:0 -map 1:a:0 output.mp4 <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffmpeg -i &lt;input&gt; -c:v libx264 -b:v 8M -pass 2 -c:a aac -b:a 128k output.mp4 <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffmpeg -i &lt;input&gt; -filter:v "filter1,filter2,filter3" &lt;output&gt; <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffmpeg -i &lt;input&gt; -vf "pad=1920:1080:(ow-iw)/2:(oh-ih)/2" &lt;output&gt; <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffmpeg -i &lt;input&gt; -filter:v "fade=t=in:st=0:d=5,fade=t=out:st=30:d=5" &lt;output&gt; <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffmpeg -i &lt;input&gt; -vf drawtext="text='Test Text':x=100:y=50:fontsize=24:fontcolor=yellow:box=1:boxcolor=red" &lt;output&gt; <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffmpeg -i input.mp4 -c:v rawvideo -pix_fmt yuv420p output.yuv <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffmpeg -i &lt;input&gt; -c:v libx264 -crf 23 -preset ultrafast -an output.mkv <i style="color: #060;font-weight: normal;"># ultrafast, superfast, veryfast, faster, fast, medium, slow, slower, veryslow</i></div> 
+      <div>ffmpeg -i input.mp4 -vcodec copy -an tmpvid.mp4 <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffmpeg -i input.mp4 -acodec pcm_s16le -ar 128k -vn tmpaud.wav <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffmpeg -i input.mp4 -acodec pcm_s16le -ar 128k -vn -ss 00:00:00.0 -t 00:00:00.5 noiseaud.wav <i style="color: #060;font-weight: normal;"># Generate a sample of noise from the audio of the file</i></div> 
+      <div>ffmpeg -i tmpvid.mp4 -i tmpaud-clean.wav -map 0:v -map 1:a -c:v copy -c:a aac -b:a 128k out.mp4 <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffmpeg -video_size 1920x1080 -framerate 25 -f x11grab -i :0.0+0,0 output.mp4 <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffmpeg -f alsa -i default -ac 1 -ar 44100 -acodec libmp3lame -ab 320k -t 10 test.mp3 <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffmpeg -f alsa -i default -ac 1 -ar 44100 -ab 320k -t 10 noise.wav <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffmpeg -i input.png output.mp4 <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffmpeg -i input.png -pix_fmt yuv420p output.h264 <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffmpeg -i input.png -pix_fmt yuv420p output.mp4 <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffmpeg -i input_%d.png -pix_fmt yuv420p output.mp4 <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffmpeg -i &lt;video&gt; -i &lt;watermark&gt; -filter_complex "[0:v][1:v]overlay=10:10:enable='between(t,1,2)'[outv]" -map "[outv]" &lt;output&gt; <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffmpeg -i input.mp4 -ar 8000 output.mp4 <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffmpeg -loop 1 -i input.jpg -c:v libx264 -pix_fmt yuv420p -t 10 output.mp4 <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffmpeg -loop 1 -i input_%03d.jpg -c:v libx264 -pix_fmt yuv420p -t 10 output.mp4 <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffmpeg -i &lt;degraded&gt; -i &lt;reference&gt; -filter_complex psnr -f null /dev/null <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffprobe &lt;input&gt; [-select_streams &lt;selection&gt;] [-show_streams|-show_format|-show_frames|-show_packets] [-show_entries &lt;entries&gt;] [-of &lt;output-format&gt;] <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffmpeg -hwaccels <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffmpeg -ss 00:02:00 -i $(youtube-dl -f 22 --get-url https://www.youtube.com/watch?v=LGhTi2FjvNA) -to 00:01:00 -c copy youtube_test.mp4 <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffmpeg -i &lt;degraded&gt; -i &lt;reference&gt; -filter_complex ssim -f null /dev/null <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffmpeg -i Alita3.mp4 -vf palettegen alita_palette_3.png <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffmpeg -i Alita3.mp4 -i alita_palette_3.png -filter_complex "paletteuse,fps=15" alita_3.gif <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffmpeg -i udp://127.0.0.1:5000 ./out.mp4 <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffmpeg -f v4l2 -i /dev/video0 -preset ultrafast -vcodec libx264 -tune zerolatency -b 900k -f h264 udp://127.0.0.1:5000 <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffplay udp://127.0.0.1:5000 <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffmpeg -i video.mp4 -c copy -vframes 70 output.mp4 <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffmpeg -i input.mkv -map 0:v:0 -c copy -f null - <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffprobe -v error -select_streams v:0 -show_entries stream=nb_frames -of default=nokey=1:noprint_wrappers=1 video.mp4 <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffmpeg -i video.mp4 -vcodec h264 -vf scale=250:-1 output.mp4 <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffmpeg -i video.mp4 -vcodec h264 -preset veryslow -crf 100 output.mp4 <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffmpeg -list_devices true -f dshow -i dummy <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffmpeg -f dshow  -i video="UScreenCapture" -f dshow -i audio="Stereo Mix (Realtek High Defini" -r 30 -vcodec mpeg4 -q 20 -acodec libmp3lame<br> -ab 128k -f mpegts udp://141.117.224.74:6666?pkt_size=188?buffer_size=65535 <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffmpeg -y -i to_gif.mp4 -i palette.png -filter_complex "paletteuse,fps=5,scale=110:-1" -loop 0 vid.gif <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffmpeg -i $(youtube-dl -f 137 --get-url https://www.youtube.com/watch?v=A9rcKZUm0zM) -an -dn -sn -r 16 -filter:v "setpts=0.25*PTS" output.mp4 <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffmpeg -i 5.mp4 -vcodec h264 -preset veryslow -an -dn -sn -filter:v "setpts=0.25*PTS" output.mp4 <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>for %%a in (*.avi) do ffmpeg -i "%%a" -vcodec copy -acodec copy -f mp4 -y "%%~na".mp4 <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffmpeg -f concat -safe 0 -i mylist.txt -c copy -metadata comment="https://www.youtube.com/playlist?list=PLrnPJCHvNZuBtcos16XJnfFx2fSUOyW_-" output.mp4 <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffmpeg -i video.mp4 -an -c:v mpeg4 video2.mp4 <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffmpeg -h full <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ffmpeg -formats -codecs -encoders -pix_fmts <i style="color: #060;font-weight: normal;"># </i></div> 
+      <!-- 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+      -->
+    </div>
+    <h1 id="4">gpg</h1>
+    <div class="shortcode">
+      <div>gpg --full-generate-key [--expert] <i style="color: #060;font-weight: normal;"># --gen-key</i></div> 
+      <div>gpg --encrypt out.tar.gz <i style="color: #060;font-weight: normal;"># -e, -d</i></div> 
+      <div>gpg --export-secret-keys > backup.gpg <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>gpg --export-secret-keys krocker > backup.gpg <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>gpg --list-secret-keys <i style="color: #060;font-weight: normal;"># -k, -K</i></div> 
+      <div>gpg --import my-private-key.gpg <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>gpg -c google-chrome-profile.tar.bz2 <i style="color: #060;font-weight: normal;"># symmetric encrypt</i></div> 
+      <div>gpg google-chrome-profile.tar.bz2.gpg <i style="color: #060;font-weight: normal;"># decrypt</i></div> 
+      <!-- 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+      -->
+    </div>
+    <h1 id="5">openssl</h1>
+    <div class="shortcode">
+      <div>openssl rand -hex 5 <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>echo hello | openssl md5 -hex -r <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>openssl enc -aes-256-cbc -d -in out.tar.gz.enc | tar xz <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>openssl enc -aes-256-cbc -salt -in file.txt -out file.txt.enc <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>openssl enc -aes-256-cbc -salt -in ipeople.tar.gz.gpg -out ipeople.tar.gz.gpg.enc <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>openssl enc -aes-256-cbc -d -in file.txt.enc -out file.txt <i style="color: #060;font-weight: normal;"># </i></div> 
+      <!-- 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+      -->
+    </div>
+    <h1 id="6">caffe</h1>
+    <div class="shortcode">
+      <div>caffe time -model train_test.prototxt -iterations 10 -gpu 0 <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>caffe time -model train_test.prototxt -weights lenet_iter_10000.caffemodel -gpu 0 -iterations 10 <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>caffe train -solver solver.prototxt -snapshot model_iter_1000.solverstate -gpu 0 <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>caffe train -solver solver.prototxt -weights caffenet.caffemodel <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>caffe test -model examples/mnist/lenet_train_test.prototxt -weights examples/mnist/lenet_iter_10000.caffemodel -gpu 0 -iterations 100 <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>caffe train -solver solver.prototxt -gpu 0,1 <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>caffe device_query -gpu 0 <i style="color: #060;font-weight: normal;"># </i></div> 
+      <!-- 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+      -->
+    </div>
+    <h1 id="7">users</h1>
+    <div class="shortcode">
+      <div>lslogins <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>adduser <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>userdel <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>who <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>whoami <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>w <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>uname -a <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>finger user <i style="color: #060;font-weight: normal;"># </i></div> 
+      <!-- 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+      -->
+    </div>
+    <h1 id="8">file information</h1>
+    <div class="shortcode">
+      <div>file -i litf-win.txt <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>iconv -l <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>iconv -f CP1251 -t UTF-8 litf-win.txt -o litf-win-utf-8.txt <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>man iconv <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ldd <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>hexdump <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>hd <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>readelf <i style="color: #060;font-weight: normal;"># -r -h -s</i></div> 
+      <div>more file <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>cat file <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>some file <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>objdump <i style="color: #060;font-weight: normal;"># -d -t</i></div> 
+      <div>fmt -t kt.txt <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>tac file <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>tail -f file <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>cat -n song.txt <i style="color: #060;font-weight: normal;"># -e -T</i></div> 
+      <div>cat test test1 test2 > test3 <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>cat test test1 test2 test3 | sort > test4 <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>objdump -S --section=.text filename <i style="color: #060;font-weight: normal;"># Напечатать ассемблерный код.</i></div> 
+      <div>ld -r -b binary -o blob.o some/dir/to/blob.png <i style="color: #060;font-weight: normal;"># objdump -t blob.o</i></div> 
+      <div>gdb -batch -ex 'file /bin/ls' -ex 'disassemble main' <i style="color: #060;font-weight: normal;"># </i></div> 
+      <!-- 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+      -->
+    </div>
+    <h1 id="9">Other</h1>
+    <div class="shortcode">
+      <div>bc <i style="color: #060;font-weight: normal;"># scale = 2; ibase = 2; obase; sqrt(3); -l</i></div> 
+      <div>gdb <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>date +%s <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>date --date='@2147483647' <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>cal -m -y -w -3 <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ncal <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>logout <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>exit <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>clear <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>halt <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>poweroff <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>reboot <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>shutdown -h 19:30 [message] <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>echo tyhfrtyujg | md5sum <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>yes | rm -i *.txt <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>fc -l <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>man <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>info <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ps <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>top <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>bg <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>wc <i style="color: #060;font-weight: normal;"># -c -m -l -w -L --files0-from=F</i></div> 
+      <div>sudo hwclock -r <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ln -s &lt;real folder&gt; &lt;link folder&gt; <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>bazel build //main:hello-world <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>sudo bazel query --nohost_deps --noimplicit_deps 'deps(//main:hello-world)' --output graph <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>cmp <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>comm <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>xdot &lt;(sudo bazel query --nohost_deps --noimplicit_deps 'deps(//main:hello-world)' --output graph) <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>nano <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>sudo bash -c "ls /etc &gt; /root/somefile" <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>strace <i style="color: #060;font-weight: normal;"># Позволяет увидеть какие системные вызовы осуществляет приложение. Нужно для отладки и выяснения причин торможения.</i></div> 
+      <div>command & <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>!! <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>Ctrl+Alt+F[1-6] <i style="color: #060;font-weight: normal;"># переключение из графичекого режима в консоль n</i></div> 
+      <div>Alt+F[1-6] <i style="color: #060;font-weight: normal;"># переключение между консолями в консольном режиме</i></div> 
+      <div>Alt+F7 <i style="color: #060;font-weight: normal;"># переключение из консольного в графический режим</i></div> 
+      <div>Alt+F2 <i style="color: #060;font-weight: normal;"># Выполнить команду в графической оболочке линукс</i></div> 
+      <div>Ctrl+Z <i style="color: #060;font-weight: normal;"># остановить текущую команду, продолжть с fg на переднем плане или bg в фоне</i></div> 
+      <div>Ctrl+D <i style="color: #060;font-weight: normal;"># разлогиниться, тоже самое, что и exit</i></div> 
+      <div>Ctrl+U <i style="color: #060;font-weight: normal;"># удалить строку</i></div> 
+      <div>Ctrl+W <i style="color: #060;font-weight: normal;"># удалить одно слово в текущей строке</i></div> 
+      <div>Cntrl+H <i style="color: #060;font-weight: normal;"># Отобразить скрытые файлы в проводнике</i></div> 
+      <div>cat /proc/cpuinfo <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>sudo sysctl -w "kernel.sysrq=1" <i style="color: #060;font-weight: normal;"># Разрешить использование комбинаций клавишь с SysRq через консоль</i></div> 
+      <div>sudo passwd root <i style="color: #060;font-weight: normal;"># Включить запись root в Ubuntu</i></div> 
+      <div>gksudo <i style="color: #060;font-weight: normal;"># Для запуска графических приложений с привелегиями суперпользователя в Ubuntu</i></div> 
+      <div>gsettings <i style="color: #060;font-weight: normal;"># Консольный редактор настроек в Ubuntu</i></div> 
+      <div>kill pid <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>killall proc <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>pidof /bin/bash <i style="color: #060;font-weight: normal;"># Узнать PID процесса по имени команды</i></div> 
+      <div>sudo passwd -l root <i style="color: #060;font-weight: normal;"># Отключить учётную запись root в Ubuntu</i></div> 
+      <div>cat /proc/meminfo <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>sudo -i <i style="color: #060;font-weight: normal;"># Если надоело вводить sudo</i></div> 
+      <div>free <i style="color: #060;font-weight: normal;"># использование памяти и swap</i></div> 
+      <div>uptime <i style="color: #060;font-weight: normal;"># показать текущий аптайм</i></div> 
+      <div>sed <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>diff3 <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>arch <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>xdot --help <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>lsblk <i style="color: #060;font-weight: normal;"># посмотреть подключённые диски</i></div> 
+      <div>sudo raspi-config <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>htop <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>dpkg -L ffmpeg <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>awk 'pattern {action}' input-file > output-file <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>acpi <i style="color: #060;font-weight: normal;"># Used to display the battery status and other ACPI information</i></div> 
+      <div>awk '{ print $5 }' table1.txt > output1.txt <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>crontab -e <i style="color: #060;font-weight: normal;"># A B C D E USERNAME /path/to/command arg1 arg2</i></div> 
+      <div>awk -F, '{ print $3 }' table1.txt > output1.txt <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>crontab -l <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>awk '$7=="$7.30" { print $3 }' table1.txt <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>crontab -u username -l <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>crontab -r <i style="color: #060;font-weight: normal;"># DELETE ALL CRONTABS!!!</i></div> 
+      <div>awk '/30/ { print $3 }' table1.txt <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>aspell -c sample.txt <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>awk '{ print ($2 * $3) + $7 }' <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>awk '{ sum=0; for (col=1; col&lt;=NF; col++) sum += $col; print sum; }' <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>env <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>awk 'length($0) > 18' marks.txt <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>awk '/a/ {print $4 "\t" $3}' marks.txt <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>awk '/a/{++cnt} END {print "Count = ", cnt}' marks.txt <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>sox noiseaud.wav -n noiseprof noise.prof <i style="color: #060;font-weight: normal;"># Generate a noise profile in sox</i></div> 
+      <div>sox tmpaud.wav tmpaud-clean.wav noisered noise.prof 0.21 <i style="color: #060;font-weight: normal;"># Clean the noise samples from the audio stream</i></div> 
+      <div>dwebp webp.webp -o jpg.png <i style="color: #060;font-weight: normal;"># apt install webp</i></div> 
+      <div>echo "-las" | xargs ls <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>write user [tty] <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>watch [options] command <i style="color: #060;font-weight: normal;"># watch -d -n 5 free -m</i></div> 
+      <div>while COMMANDS; do COMMANDS; done <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>whatis -d ls <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>wall <i style="color: #060;font-weight: normal;"># command in Linux system is used to write a message to all users</i></div> 
+      <div>vmstat -a <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>users [OPTION]... [FILE] <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>until COMMANDS; do COMMANDS; done <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>uniq [OPTION] [INPUT[OUTPUT]] <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>lshw -c network <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>unix2dos; dos2unix <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>expand; unexpand <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>echo -e "ttt\tttt" <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>type -a pwd <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>tty <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>date +%s | sha256sum | base64 | head -c 32 ; echo <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>echo $? <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>echo %ERRORLEVEL% <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>wc -l file1.txt | tee -a file2.txt <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>sum -r myfile.txt <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>cat greekfile | tr “[a-z]” “[A-Z]” <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>cat geekfile | tr “[:lower:]” “[:upper:]” <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>stty [-F DEVICE | --file=DEVICE] [-a|--all] <i style="color: #060;font-weight: normal;"># stty command in Linux is used to change and print terminal line settings</i></div> 
+      <div>stty -g <i style="color: #060;font-weight: normal;"># This option will print all current settings in a stty-readable form</i></div> 
+      <div>source <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>sleep NUMBER[SUFFIX]... <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>sudo showkey -a <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>setsid [options] program [arguments] <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>seq [OPTION]... FIRST INCREMENT LAST <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>dmesg | grep nvidia <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>lsmod | grep nvidia <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>sudo lshw -class video <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>dkms status <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>join <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>java -Xss16m JSortTest <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>espeak -v english-us "Hello World" <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>time ls -U /home/app/express.repository/offercache/ >/dev/null <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>nice <i style="color: #060;font-weight: normal;"># уменьшает приоритет процесса</i></div> 
+      <div>date +%D_%r <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>for f in ./src/*.mp4; do echo "file '$f'" >> mylist.txt; done <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>xmodmap -pk <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>xmodmap -pp <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>convert fake_keyboard_16.png fake_keyboard_32.png fake_keyboard_48.png fake_keyboard_64.png fake_keyboard_128.png fake_keyboard_256.png fake_keyboard.ico <i style="color: #060;font-weight: normal;"># </i></div> 
+      <!-- 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+      -->
+    </div>
+    <h1 id="10">Search</h1>
+    <div class="shortcode">
+      <div>which ls <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>find / -type d -name Tecmint <i style="color: #060;font-weight: normal;"># -type f</i></div> 
+      <div>find / -type d -perm 777 -print -exec chmod 755 {} \; <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>find . -type f -name \"tecmint.txt\" -exec rm -f {} \\; <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>find . -type f -size +100k -exec echo {} \; <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>find / -name *.tmp -ok rm {} ; <i style="color: #060;font-weight: normal;"># Найти и удалить все временные файлы</i></div> 
+      <div>locate file <i style="color: #060;font-weight: normal;"># найти все файлы с именем file</i></div> 
+      <div>find ~ -size +100M -size -150M <i style="color: #060;font-weight: normal;"># Найти в домашнем каталоге файлы от 100 до 150 мегабайт</i></div> 
+      <div>whereis app <i style="color: #060;font-weight: normal;"># Возможное расположение программы app</i></div> 
+      <div>find /usr -name "*.pc" | grep "blas" <i style="color: #060;font-weight: normal;"># </i></div> 
+      <!-- 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+      -->
+    </div>
+    <h1 id="11">Compress</h1>
+    <div class="shortcode">
+      <div>gzip file <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>gzip -d file.gz <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>zip [options] zipfile files_list <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>unzip myfile.zip <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>tar cvzf <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>tar cf file.tar files <i style="color: #060;font-weight: normal;"># Создать tar-архив с именем file.tar содержащий files</i></div> 
+      <div>tar xf file.tar <i style="color: #060;font-weight: normal;"># Распаковать file.tar</i></div> 
+      <div>tar czf file.tar.gz files <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>tar xzf file.tar.gz <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>tar cjf file.tar.bz2 <i style="color: #060;font-weight: normal;"># создать архив tar с сжатием Bzip2</i></div> 
+      <div>tar xjf file.tar.bz2 <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>tar -tvf archive.tar <i style="color: #060;font-weight: normal;"># List all files in archive.tar verbosely.</i></div> 
+      <div>tar cvzf /media/krocker/7686CD5386CD1511/Code_`date +%Y_%m_%d`.tar.gz Code/ <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>tar cvzf /media/krocker/7686CD5386CD1511/Code_`date +%Y_%m_%d`.tar.gz Code/ <i style="color: #060;font-weight: normal;"># </i></div> 
+      <!-- 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+      -->
+    </div>
+    <h1 id="12">NVidia</h1>
+    <div class="shortcode">
+      <div>nvidia-smi -a <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>lspci | grep -i nvidia <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>modprobe nvidia <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>nvcc -V <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>dpkg -l | grep -i nvidia <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>prime-select query <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>sudo prime-select intel <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>sudo prime-select nvidia <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>whereis nvidia <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>nvidia-settings <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>lspci -v | grep VGA <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>nvcc -V <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>sudo modprobe nvidia <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>sudo nvidia-xconfig <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>sudo systemctl status nvidia-fallback <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>systemctl is-active nvidia <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>sudo software-properties-gtk <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>cvt 1920 1080 <i style="color: #060;font-weight: normal;"># Выдаст конфигурационную строку для монитора</i></div> 
+      <div>sudo prime-offload <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>locate -i nvidia | grep ko <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>sudo rm /etc/X11/xorg.conf* <i style="color: #060;font-weight: normal;"># Если разрешение экрана низкое</i></div> 
+      <div>cat /var/log/Xorg.0.log | grep nvidia <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>sudo ubuntu-drivers devices <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>modinfo nvidia <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>sudo ubuntu-drivers autoinstall <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>sudo apt-get remove --purge nvidia-410 <i style="color: #060;font-weight: normal;"># Вычищай таким способом всё, что выдаёт dpkg -l | grep -i nvidia</i></div> 
+      <div>sudo dpkg -i --force-overwrite /var/cache/apt/archives/nvidia-418_418.67-0ubuntu1_amd64.deb <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>sudo apt --fix-broken install <i style="color: #060;font-weight: normal;"># Доработка после неудачной установки cuda</i></div> 
+      <div>sudo mokutil --disable-validation <i style="color: #060;font-weight: normal;"># Установка пароля для небезопасного режима загрузки с неподписанными драйверами</i></div> 
+      <div>sudo update-secureboot-policy --new-key <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>kmodsign <i style="color: #060;font-weight: normal;"># Сделать подпись для драйвера. sudo mokutil --import <your key></your></i></div> 
+      <div>modprobe -vv nvidia <i style="color: #060;font-weight: normal;"># более подробный вывод информации об ошибке</i></div> 
+      <div>sudo dpkg -i --force-overwrite cuda-repo-ubuntu1804_10.1.168-1_amd64.deb <i style="color: #060;font-weight: normal;"># Если ошибка dpkg: error processing archive cuda-repo-ubuntu1804_10.1.168-1_amd64.deb (--install):</i></div> 
+      <div>sudo dpkg --configure -a <i style="color: #060;font-weight: normal;"># </i></div> 
+      <!-- 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+      -->
+    </div>
+    <h1 id="13">filesystem</h1>
+    <div class="shortcode">
+      <div>tree . <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>sudo chmod +x /etc/rc.local <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>chattr +i /boot/grub/menu.lst <i style="color: #060;font-weight: normal;"># Запретить изменение, переименование и удаление файла</i></div> 
+      <div>sudo hdparm -I /dev/sda | grep \"TRIM supported\" <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>iostat <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>sudo mount -t ext4 /dev/sda1 /mnt <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>chattr -i file <i style="color: #060;font-weight: normal;"># Разрешить изменения файла</i></div> 
+      <div>du <i style="color: #060;font-weight: normal;"># estimate file space usage</i></div> 
+      <div>sudo umount /media/mynewdrive <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>rmdir <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>lsattr <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>chmod 755 file <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>rm -rf ~/.local/share/Trash/info/* ~/.local/share/Trash/files/* <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>sudo mount /dev/sdb1 /media/mynewdrive <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>cp -r dir <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>touch <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>sudo mkfs -t ext4 /dev/sdb1 <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>echo y | rm file.txt <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>mount -a <i style="color: #060;font-weight: normal;"># Для перемонтирования файловых систем после изменения fstab</i></div> 
+      <div>sudo fdisk /dev/sdb <i style="color: #060;font-weight: normal;"># Команда для создания нового раздела на устанавливаемом HDD диске. Потом нажать n и много раз Enter</i></div> 
+      <div>chattr +A file <i style="color: #060;font-weight: normal;"># Запретить обновление записи atime при изменении файла</i></div> 
+      <div>df -H <i style="color: #060;font-weight: normal;"># Посмотреть используемое дисковое пространство</i></div> 
+      <div>gdisk <i style="color: #060;font-weight: normal;"># Для работы с разделами GPT</i></div> 
+      <div>fsck <i style="color: #060;font-weight: normal;"># Проверка файловой системы на наличие ошибок</i></div> 
+      <div>ls –l /dev/disk/by-id | grep usb <i style="color: #060;font-weight: normal;"># Узнать о подключённых USB к компу для последующего ручного монтирования</i></div> 
+      <div>e2label /dev/XXX &lt;метка&gt; -  <i style="color: #060;font-weight: normal;"># Установить метку на файловые системы ext2/ext3/ext4</i></div> 
+      <div>reiserfstune, jfs_tune, xfs_admin, ntfslabel <i style="color: #060;font-weight: normal;"># Установить метку на другие файловые системы</i></div> 
+      <div>ls -lF /dev/disk/by-label <i style="color: #060;font-weight: normal;"># Узнать метки разделов можно с помощью команды</i></div> 
+      <div>ls –l /dev/disk/by-uuid/ <i style="color: #060;font-weight: normal;"># Узнать "длинные имена" устройства можно с помощью простой команды</i></div> 
+      <div>sudo dcfldd bs=4M if=ttt.img of=/dev/sdc <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>sudo sync <i style="color: #060;font-weight: normal;"># Сбросить все кэши ввода-вывода на диски</i></div> 
+      <div>iotop <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>sudo chown -R krocker . <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>du -h . <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>lsof /dev/null <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>lsof -u krocker <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>dumpkeys -i <i style="color: #060;font-weight: normal;"># dumpkeys command in Linux is used for the dump keyboard translation tables</i></div> 
+      <div>sudo lsof -i TCP:80 <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>sudo chmod a+rw /dev/ttyACM0 <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>sudo chmod +x /etc/rc.local <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>sudo dd if=/path/to/iso/windows.iso of=/dev/sdX bs=4M; sync <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>df -ih <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>fatrace <i style="color: #060;font-weight: normal;"># как понять, кто грузит диски</i></div> 
+      <div>ionice <i style="color: #060;font-weight: normal;"># соответственно корректирует приоритет ввода/вывода (I/O scheduling)</i></div> 
+      <div>fdupes -r . <i style="color: #060;font-weight: normal;"># Найти дубликаты файлов в директории</i></div> 
+      <div>du -hs * <i style="color: #060;font-weight: normal;"># Вывести размер всех субдиректорий</i></div> 
+      <div>shred -vzn 0 backup_list.txt <i style="color: #060;font-weight: normal;"># Затереть файл нулями перед удалением</i></div> 
+      <!-- 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+      -->
+    </div>
+    <h1 id="14">ftp</h1>
+    <div class="shortcode">
+      <div>sftp linus@kernel.org <i style="color: #060;font-weight: normal;"># </i></div> 
+      <!-- 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+      -->
+    </div>
+    <h1 id="15">ssh</h1>
+    <div class="shortcode">
+      <div>scp &lt;file&gt; &lt;username&gt;@&lt;IP address or hostname&gt;:&lt;dst&gt; <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>scp -r catbert@192.168.1.103:/home/ . <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>scp -r /media/disk/summer_pics/ mike@192.168.1.1:"/var/www/Summer 2008/" <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>ssh remote_username@remote_host <i style="color: #060;font-weight: normal;"># -p port</i></div> 
+      <div>ssh-copy-id user@host <i style="color: #060;font-weight: normal;"># SSH добавить ваш ключ на host для user чтобы включить логин без пароля и по ключам</i></div> 
+      <div>sudo systemctl status ssh <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>sudo service ssh stop|start|restart <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>sudo systemctl enable ssh <i style="color: #060;font-weight: normal;"># </i></div> 
+      <!-- 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+      -->
+    </div>
+    <h1 id="16">h5</h1>
+    <div class="shortcode">
+      <div>h5dump -H -p h5tutr_dset.h5 <i style="color: #060;font-weight: normal;"># -n -d &lt;name&gt;</i></div> 
+      <div>h5ls <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>h5import <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>h5debug <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>h5import points.txt -d 1000,2 -p /X -t TEXTFP -s 32 classes.txt -d 1000,1 -p y -t TEXTFP -s 32 -o data.h5 <i style="color: #060;font-weight: normal;"># </i></div> 
+      <!-- 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+      -->
+    </div>
+    <h1 id="17">java</h1>
+    <div class="shortcode">
+      <div>javac hello_world.java <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>java hello_world <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>javadoc AddNum.java <i style="color: #060;font-weight: normal;"># </i></div> 
+      <!-- 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
+      -->
+    </div>
+  </div>
+  <div>
+    <svg id="scrollToTopBtn" class="scrollToTopBtn" onclick="scrollToTop()" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="40" height="40" viewBox="0 0 40 40" xml:space="preserve">
+      <g transform="matrix(1.4367092802 0 0 1.4367092802 20 20)">
+      <path style="stroke: rgb(126,96,230); stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(255,120,0); fill-rule: nonzero; opacity: 1;" vector-effect="non-scaling-stroke"  transform=" translate(0, 0)" d="M 0 -13.9207 C 7.68423 -13.9207 13.9207 -7.68423 13.9207 0 C 13.9207 7.68423 7.68423 13.9207 0 13.9207 C -7.68423 13.9207 -13.9207 7.68423 -13.9207 0 C -13.9207 -7.68423 -7.68423 -13.9207 0 -13.9207 z" stroke-linecap="round" />
+      </g>
+      <g transform="matrix(1 0 0 1 20 18)">
+      <path style="stroke: rgb(0,0,0); stroke-width: 0; stroke-dasharray: none; stroke-linecap: butt; stroke-dashoffset: 0; stroke-linejoin: miter; stroke-miterlimit: 4; fill: rgb(255,255,255); fill-rule: nonzero; opacity: 1;" vector-effect="non-scaling-stroke"  transform=" translate(0, 0)" d="M -10 7 L 10 7 L 0 -7 z" stroke-linecap="round" />
+      </g>
+    </svg>
+  </div>
+  <script src="scripts.js"></script>
+</body>
+</html>
