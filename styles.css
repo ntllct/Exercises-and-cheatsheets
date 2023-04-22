@@ -110,6 +110,17 @@ h1 {
 h1:not(:first-child) {
   margin-top: 40px;
 }
+h2 {
+  font-weight: bold;
+  font-size: 1.1em;
+  margin-bottom: 20px;
+  text-transform: lowercase;
+}
+h2::before {
+  content: '●';
+  font-size: 1.1em;
+  margin-right: 10px;
+}
 
 @keyframes opacity_blink {
 	from {

@@ -14,15 +14,122 @@
   <div>
     <ul>
       <li><a href="#1">Checks</a></li>
+      <li><a href="#2">Publush gh-pages</a></li>
+      <li><a href="#gettinghelp">Getting help</a></li>
+      <li><a href="#gettinginfo">Getting info</a></li>
+      <li><a href="#specialfiles">Special files</a></li>
     </ul>
   </div>
   <div>
+    <!-- <div> <i style="color: #060;font-weight: normal;"># </i></div> -->
     <h1 id="1">Checks</h1>
     <div class="shortcode">
       <div>ssh -T git@github.com <i style="color: #060;font-weight: normal;"># check github connection</i></div>
+      <div>ssh -vT git@github.com</div>
+      <div>ssh-add -l</div>
+      <div>ssh-add ~/.ssh/git_rsa <i style="color: #060;font-weight: normal;"># standart password as key phrase</i></div>
       <div>gpg --list-secret-keys --keyid-format=long <i style="color: #060;font-weight: normal;"># list gpg keys</i></div>
       <div>git status <i style="color: #060;font-weight: normal;"># </i></div>
+      <!-- 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div>
+        <div> <i style="color: #060;font-weight: normal;"># </i></div>
+        <div> <i style="color: #060;font-weight: normal;"># </i></div>
+        <div> <i style="color: #060;font-weight: normal;"># </i></div>
+        <div> <i style="color: #060;font-weight: normal;"># </i></div>
+        <div> <i style="color: #060;font-weight: normal;"># </i></div>
+        <div> <i style="color: #060;font-weight: normal;"># </i></div>
+        <div> <i style="color: #060;font-weight: normal;"># </i></div>
+        <div> <i style="color: #060;font-weight: normal;"># </i></div>
+        <div> <i style="color: #060;font-weight: normal;"># </i></div>
+      -->
     </div>
+    <h1 id="2">Publush gh-pages</h1>
+    <div class="shortcode">
+      <div>git checkout -b gh-pages</div>
+      <div>git push origin gh-pages</div>
+      <!-- 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div>
+        <div> <i style="color: #060;font-weight: normal;"># </i></div>
+        <div> <i style="color: #060;font-weight: normal;"># </i></div>
+        <div> <i style="color: #060;font-weight: normal;"># </i></div>
+        <div> <i style="color: #060;font-weight: normal;"># </i></div>
+        <div> <i style="color: #060;font-weight: normal;"># </i></div>
+        <div> <i style="color: #060;font-weight: normal;"># </i></div>
+        <div> <i style="color: #060;font-weight: normal;"># </i></div>
+        <div> <i style="color: #060;font-weight: normal;"># </i></div>
+        <div> <i style="color: #060;font-weight: normal;"># </i></div>
+      -->
+    </div>
+    <h1 id="gettinghelp">Getting help</h1>
+    <a href="https://docs.github.com/en" target="_blank">Online documentation</a>
+    <div class="shortcode">
+      <div>git help &lt;command&gt; <i style="color: #060;font-weight: normal;"># </i></div>
+      <div>git &lt;command&gt; --help <i style="color: #060;font-weight: normal;"># </i></div>
+      <div>man git-&lt;command&gt; <i style="color: #060;font-weight: normal;"># </i></div>
+      <!-- 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div>
+        <div> <i style="color: #060;font-weight: normal;"># </i></div>
+        <div> <i style="color: #060;font-weight: normal;"># </i></div>
+        <div> <i style="color: #060;font-weight: normal;"># </i></div>
+        <div> <i style="color: #060;font-weight: normal;"># </i></div>
+        <div> <i style="color: #060;font-weight: normal;"># </i></div>
+        <div> <i style="color: #060;font-weight: normal;"># </i></div>
+        <div> <i style="color: #060;font-weight: normal;"># </i></div>
+        <div> <i style="color: #060;font-weight: normal;"># </i></div>
+        <div> <i style="color: #060;font-weight: normal;"># </i></div>
+      -->
+    </div>
+    <h1 id="gettinginfo">Getting info</h1>
+    <div class="shortcode">
+      <div>git config user.name <i style="color: #060;font-weight: normal;"># </i></div>
+      <div>git config --list --show-origin <i style="color: #060;font-weight: normal;"># </i></div>
+      <div>git remote <i style="color: #060;font-weight: normal;"># просмотреть список настроенных удалённых репозиториев</i></div>
+      <div>git remote -v <i style="color: #060;font-weight: normal;"># просмотреть адреса для чтения и записи, привязанные к репозиторию</i></div>
+      <div>git remote show origin <i style="color: #060;font-weight: normal;"># </i></div>
+      <!-- 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div>
+        <div> <i style="color: #060;font-weight: normal;"># </i></div>
+        <div> <i style="color: #060;font-weight: normal;"># </i></div>
+        <div> <i style="color: #060;font-weight: normal;"># </i></div>
+        <div> <i style="color: #060;font-weight: normal;"># </i></div>
+        <div> <i style="color: #060;font-weight: normal;"># </i></div>
+        <div> <i style="color: #060;font-weight: normal;"># </i></div>
+        <div> <i style="color: #060;font-weight: normal;"># </i></div>
+        <div> <i style="color: #060;font-weight: normal;"># </i></div>
+        <div> <i style="color: #060;font-weight: normal;"># </i></div>
+      -->
+    </div>
+    <h2>Logs</h2>
+    <div class="shortcode">
+      <div>git log --oneline --decorate <i style="color: #060;font-weight: normal;"># </i></div>
+      <div>git log -1 HEAD --stat <i style="color: #060;font-weight: normal;"># </i></div>
+      <div>git log --oneline --graph <i style="color: #060;font-weight: normal;"># </i></div>
+      <div>git log --pretty=format:'%h %ad | %s%d [%an]' --graph --date=short <i style="color: #060;font-weight: normal;"># </i></div>
+      <div>git log --stat 77cfea5 <i style="color: #060;font-weight: normal;"># </i></div>
+      <div>git log origin/gh-pages <i style="color: #060;font-weight: normal;"># </i></div>
+      <div>git log --show-signature -1 <i style="color: #060;font-weight: normal;"># check sign</i></div>
+      <div>git log --oneline --decorate --graph --all <i style="color: #060;font-weight: normal;"># </i></div>
+      <!-- 
+        <div> <i style="color: #060;font-weight: normal;"># </i></div>
+        <div> <i style="color: #060;font-weight: normal;"># </i></div>
+        <div> <i style="color: #060;font-weight: normal;"># </i></div>
+        <div> <i style="color: #060;font-weight: normal;"># </i></div>
+        <div> <i style="color: #060;font-weight: normal;"># </i></div>
+        <div> <i style="color: #060;font-weight: normal;"># </i></div>
+        <div> <i style="color: #060;font-weight: normal;"># </i></div>
+        <div> <i style="color: #060;font-weight: normal;"># </i></div>
+        <div> <i style="color: #060;font-weight: normal;"># </i></div>
+        <div> <i style="color: #060;font-weight: normal;"># </i></div>
+        <div> <i style="color: #060;font-weight: normal;"># </i></div>
+        <div> <i style="color: #060;font-weight: normal;"># </i></div>
+      -->
+    </div>
+    <h1 id="specialfiles">Special files</h1>
+    <h2>.gitignore</h2>
+    <h2>.gitattributes</h2>
+    <h2>.mailmap</h2>
+    <h2>.gitmodules</h2>
+    <h2>.nojekyll</h2>
   </div>
   <div>
     <svg id="scrollToTopBtn" class="scrollToTopBtn" onclick="scrollToTop()" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" version="1.1" width="40" height="40" viewBox="0 0 40 40" xml:space="preserve">
