@@ -173,13 +173,13 @@ p {
   transform: translateY(0)
 }
 
-.code>div:not(.separator):nth-child(2n) {
+.code>div:nth-child(2n) {
   background-color: rgba(255,255,255,0.1);
 }
-.code>div.main:not(.separator):nth-child(2n) {
+.code>div.main:nth-child(2n of .main) {
   background-color: rgba(0,128,0,0.5);
 }
-.code>div.main:not(.separator):nth-child(2n + 1) {
+.code>div.main:nth-child(2n + 1 of .main) {
   background-color: rgba(0,128,0,0.3);
 }
 
@@ -211,16 +211,16 @@ div.separator {
   box-shadow: 0 0 8px 1px #0d0;
 }
 
-.shortcode>div:not(.separator):nth-child(2n) {
+.shortcode>div:nth-child(2n) {
   background-color: rgba(255,255,255,0.1);
 }
-.codeshow>div:not(.separator):nth-child(2n) {
+.codeshow>div:nth-child(2n) {
   background-color: rgba(255,255,255,0.1);
 }
-.codeshow>div.main:not(.separator):nth-child(2n) {
+.codeshow>div.main:nth-child(2n) {
   background-color: rgba(0,128,0,0.5);
 }
-.codeshow>div.main:not(.separator):nth-child(2n + 1) {
+.codeshow>div.main:nth-child(2n + 1) {
   background-color: rgba(0,128,0,0.3);
 }
 .codeshow>div.main {
