@@ -15,48 +15,161 @@
     <ul>
       <li><a href="#1">Comparission</a></li>
       <li><a href="#2">Negotiation</a></li>
+      <li><a href="#conversion">Conversion</a></li>
+      <li><a href="#tricks">Tricks</a></li>
     </ul>
   </div>
   <div>
     <h1 id="1">Comparission</h1>
     <div class="shortcode">
-      <div>console.log(true == "true") <i style="color: #060;font-weight: normal;"># false</i></div>
-      <div>console.log(true == "1") <i style="color: #060;font-weight: normal;"># true</i></div>
-      <div>console.log(1 === 1) <i style="color: #060;font-weight: normal;"># true</i></div>
-      <div>console.log('hello' === 'hello') <i style="color: #060;font-weight: normal;"># true</i></div>
-      <div>console.log('hello' === "hello") <i style="color: #060;font-weight: normal;"># true</i></div>
-      <div>console.log('1' === 1) <i style="color: #060;font-weight: normal;"># false</i></div>
-      <div>console.log('1' == 1) <i style="color: #060;font-weight: normal;"># true</i></div>
-      <div>console.log(0 === false) <i style="color: #060;font-weight: normal;"># false</i></div>
-      <div>console.log(0 == false) <i style="color: #060;font-weight: normal;"># true</i></div>
-      <div>console.log(true === 1) <i style="color: #060;font-weight: normal;"># false</i></div>
-      <div>console.log(true == 1) <i style="color: #060;font-weight: normal;"># true</i></div>
-      <div>console.log(null === undefined) <i style="color: #060;font-weight: normal;"># false</i></div>
-      <div>console.log(null == undefined) <i style="color: #060;font-weight: normal;"># true</i></div>
-      <div>console.log(3 === new Number(3)) <i style="color: #060;font-weight: normal;"># false</i></div>
-      <div>console.log(3 == new Number(3)) <i style="color: #060;font-weight: normal;"># true</i></div>
-      <div>console.log(3 == new Number(4)) <i style="color: #060;font-weight: normal;"># false</i></div>
-      <div>console.log(NaN === NaN) <i style="color: #060;font-weight: normal;"># false</i></div>
-      <div>console.log(NaN == NaN) <i style="color: #060;font-weight: normal;"># false</i></div>
-      <div>console.log(+0 === -0) <i style="color: #060;font-weight: normal;"># true</i></div>
-      <div>console.log(+0 == -0) <i style="color: #060;font-weight: normal;"># true</i></div>
-      <div>console.log({ key: "value" } === { key: "value" }) <i style="color: #060;font-weight: normal;"># false</i></div>
-      <div>console.log({ key: "value" } == { key: "value" }) <i style="color: #060;font-weight: normal;"># false</i></div>
-      <div>const object1 = { key: "value", }; const object2 = { key: "value", }; console.log(object1 === object2); <i style="color: #060;font-weight: normal;"># false</i></div>
-      <div>const object1 = { key: "value", }; const object2 = { key: "value", }; console.log(object1 == object2); <i style="color: #060;font-weight: normal;"># false</i></div>
-      <div>const object1 = { key: "value", }; const object2 = { key: "value", }; console.log(object1 === object1); <i style="color: #060;font-weight: normal;"># true</i></div>
+      <div>console.log(true == "true") <i style="color: #060;font-weight: normal;">// false</i></div>
+      <div>console.log(true == "1") <i style="color: #060;font-weight: normal;">// true</i></div>
+      <div>console.log(1 === 1) <i style="color: #060;font-weight: normal;">// true</i></div>
+      <div>console.log('hello' === 'hello') <i style="color: #060;font-weight: normal;">// true</i></div>
+      <div>console.log('hello' === "hello") <i style="color: #060;font-weight: normal;">// true</i></div>
+      <div>console.log('1' === 1) <i style="color: #060;font-weight: normal;">// false</i></div>
+      <div>console.log('1' == 1) <i style="color: #060;font-weight: normal;">// true</i></div>
+      <div>console.log(0 === false) <i style="color: #060;font-weight: normal;">// false</i></div>
+      <div>console.log(0 == false) <i style="color: #060;font-weight: normal;">// true</i></div>
+      <div>console.log(true === 1) <i style="color: #060;font-weight: normal;">// false</i></div>
+      <div>console.log(true == 1) <i style="color: #060;font-weight: normal;">// true</i></div>
+      <div>console.log(null === undefined) <i style="color: #060;font-weight: normal;">// false</i></div>
+      <div>console.log(null == undefined) <i style="color: #060;font-weight: normal;">// true</i></div>
+      <div>console.log(3 === new Number(3)) <i style="color: #060;font-weight: normal;">// false</i></div>
+      <div>console.log(3 == new Number(3)) <i style="color: #060;font-weight: normal;">// true</i></div>
+      <div>console.log(3 == new Number(4)) <i style="color: #060;font-weight: normal;">// false</i></div>
+      <div>console.log(NaN === NaN) <i style="color: #060;font-weight: normal;">// false</i></div>
+      <div>console.log(NaN == NaN) <i style="color: #060;font-weight: normal;">// false</i></div>
+      <div>console.log(+0 === -0) <i style="color: #060;font-weight: normal;">// true</i></div>
+      <div>console.log(+0 == -0) <i style="color: #060;font-weight: normal;">// true</i></div>
+      <div>console.log({ key: "value" } === { key: "value" }) <i style="color: #060;font-weight: normal;">// false</i></div>
+      <div>console.log({ key: "value" } == { key: "value" }) <i style="color: #060;font-weight: normal;">// false</i></div>
+      <div>const object1 = { key: "value", }; const object2 = { key: "value", }; console.log(object1 === object2); <i style="color: #060;font-weight: normal;">// false</i></div>
+      <div>const object1 = { key: "value", }; const object2 = { key: "value", }; console.log(object1 == object2); <i style="color: #060;font-weight: normal;">// false</i></div>
+      <div>const object1 = { key: "value", }; const object2 = { key: "value", }; console.log(object1 === object1); <i style="color: #060;font-weight: normal;">// true</i></div>
+      <div>console.log(![] === false) <i style="color: #060;font-weight: normal;">// true</i></div> 
+      <div>console.log(+[] === 0) <i style="color: #060;font-weight: normal;">// true</i></div> 
+      <div>console.log([]+[] === "") <i style="color: #060;font-weight: normal;">// true</i></div> 
+      <div>console.log("hello"[0] === "h") <i style="color: #060;font-weight: normal;">// true</i></div> 
+      <div>console.log(+("1" + "1") === 11) <i style="color: #060;font-weight: normal;">// true</i></div> 
+      <div>console.log((![]+[])[+!![]] === "a") <i style="color: #060;font-weight: normal;">// true</i></div> 
+      <div>console.log([][[]] + [] === "undefined") <i style="color: #060;font-weight: normal;">// true</i></div> 
+      <div>console.log([]["fill"]+[] === "function fill() { [native code] }") <i style="color: #060;font-weight: normal;">// true</i></div> 
+      <div>console.log("test"["bold"]() === "&lt;b&gt;test&lt;/b&gt;") <i style="color: #060;font-weight: normal;">// true</i></div> 
+      <!--
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+      -->
     </div>
     <h1 id="2">Negotiation</h1>
     <div class="shortcode">
-      <div>console.log(!"") <i style="color: #060;font-weight: normal;"># true</i></div>
-      <div>console.log(!" ") <i style="color: #060;font-weight: normal;"># false</i></div>
-      <div>console.log(!NaN) <i style="color: #060;font-weight: normal;"># true</i></div>
-      <div>console.log(!null) <i style="color: #060;font-weight: normal;"># true</i></div>
-      <div>console.log(!undefined) <i style="color: #060;font-weight: normal;"># true</i></div>
-      <div>console.log(!+0) <i style="color: #060;font-weight: normal;"># true</i></div>
-      <div>console.log(!-0) <i style="color: #060;font-weight: normal;"># true</i></div>
-      <div>console.log(!{}) <i style="color: #060;font-weight: normal;"># false</i></div>
-      <div>console.log(![]) <i style="color: #060;font-weight: normal;"># false</i></div>
+      <div>console.log(!"") <i style="color: #060;font-weight: normal;">// true</i></div>
+      <div>console.log(!" ") <i style="color: #060;font-weight: normal;">// false</i></div>
+      <div>console.log(!NaN) <i style="color: #060;font-weight: normal;">// true</i></div>
+      <div>console.log(!null) <i style="color: #060;font-weight: normal;">// true</i></div>
+      <div>console.log(!undefined) <i style="color: #060;font-weight: normal;">// true</i></div>
+      <div>console.log(!+0) <i style="color: #060;font-weight: normal;">// true</i></div>
+      <div>console.log(!-0) <i style="color: #060;font-weight: normal;">// true</i></div>
+      <div>console.log(!{}) <i style="color: #060;font-weight: normal;">// false</i></div>
+      <div>console.log(![]) <i style="color: #060;font-weight: normal;">// false</i></div>
+      <div>this.hasMoney = !!cash; <i style="color: #060;font-weight: normal;">// двойное отрицание для приведения к булеву типу</i></div> 
+      <!--
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+      -->
+    </div>
+    <h1 id="conversion">Conversion</h1>
+    <div class="shortcode">
+      <div>return +strNumber; <i style="color: #060;font-weight: normal;">// конвертация строки в число. Работает только со строками и датами.</i></div> 
+      <div>console.log(+new Date()) // 1461288164385 <i style="color: #060;font-weight: normal;">// </i></div> 
+      <!--
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+      -->
+    </div>
+    <h1 id="tricks">Tricks</h1>
+    <div class="shortcode">
+      <div>connected && login(); <i style="color: #060;font-weight: normal;">// Вместо if одой строкой</i></div> 
+      <div>this.name = name || "Oliver Queen"; <i style="color: #060;font-weight: normal;">// Значения по умолчанию при помощи оператора ||</i></div> 
+      <div>if ('querySelector' in document) { ... } <i style="color: #060;font-weight: normal;">// </i></div> 
+      <div>console.log(array.slice(-2)); <i style="color: #060;font-weight: normal;">// </i></div> 
+      <div>array.length = 3; <i style="color: #060;font-weight: normal;">// </i></div> 
+      <div>console.log(string.replace(/hn/g, "ana")); <i style="color: #060;font-weight: normal;">// </i></div> 
+      <div>console.log(array1.push.apply(array1, array2)); <i style="color: #060;font-weight: normal;">// Предпочтительнее concat для больших массивов</i></div> 
+      <div>var arrayElements = [].slice.call(elements); <i style="color: #060;font-weight: normal;">// Конвертация NodeList в массив для использоваия методов массива</i></div> 
+      <div>var arrayElements = Array.from(elements); <i style="color: #060;font-weight: normal;">// </i></div> 
+      <div>console.log(list.sort(function() { Math.random() - 0.5 })); <i style="color: #060;font-weight: normal;">// shuffle array</i></div> 
+      <div>[2,1]["sort"]() <i style="color: #060;font-weight: normal;">// [2,1].sort()</i></div> 
+      <!--
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+        <div> <i style="color: #060;font-weight: normal;">// </i></div> 
+      -->
     </div>
   </div>
   <div>

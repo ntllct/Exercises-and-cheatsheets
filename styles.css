@@ -248,3 +248,12 @@ div.separator>div {
   padding: 2px 0;
   box-shadow: 0 0 8px 1px #0d0;
 }
+body>div:nth-child(2) ul {
+  list-style: disc;
+}
+body>div:nth-child(2) ol {
+  list-style: decimal;
+}
+ul>ul, ul>ol, ol>ul {
+  padding: 10px 0 10px 20px;
+}
