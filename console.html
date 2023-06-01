@@ -447,10 +447,10 @@
       <div>find ~ -size +100M -size -150M <i style="color: #060;font-weight: normal;"># Найти в домашнем каталоге файлы от 100 до 150 мегабайт</i></div> 
       <div>whereis app <i style="color: #060;font-weight: normal;"># Возможное расположение программы app</i></div> 
       <div>find /usr -name "*.pc" | grep "blas" <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>find /home/krocker/Downloads/gutenberg -name '*.zip' -exec sh -c 'unzip -d /home/krocker/Downloads/gutenberg/extracted "{}"' ';' <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>find . -name '*.zip' -exec sh -c 'unzip -d "`dirname \"{}\"`" "{}"' ';' <i style="color: #060;font-weight: normal;"># </i></div> 
+      <div>find . -type f -name '*.zip' -exec unzip {} \; <i style="color: #060;font-weight: normal;"># </i></div> 
       <!-- 
-        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
-        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
-        <div> <i style="color: #060;font-weight: normal;"># </i></div> 
         <div> <i style="color: #060;font-weight: normal;"># </i></div> 
         <div> <i style="color: #060;font-weight: normal;"># </i></div> 
         <div> <i style="color: #060;font-weight: normal;"># </i></div> 
